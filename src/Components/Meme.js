@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
 import {withRouter} from 'react-router-dom'
 import axios from 'axios'
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
+import {unfavorite, favorited} from '../ducks/reducer'
 
 class Meme extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             favorited: false
         }
